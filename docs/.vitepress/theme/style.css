@@ -1,0 +1,400 @@
+/* Google Fonts - 现代无衬线字体 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* 基础变量覆盖 - 现代工程美学 */
+:root {
+  /* 配色方案 - 专业沉稳 */
+  --vp-c-brand-1: #2563EB;
+  --vp-c-brand-2: #3B82F6;
+  --vp-c-brand-3: #60A5FA;
+  --vp-c-brand-soft: rgba(37, 99, 235, 0.1);
+  
+  /* 背景色 */
+  --vp-c-bg: #FFFFFF;
+  --vp-c-bg-alt: #F8FAFC;
+  --vp-c-bg-elv: #FFFFFF;
+  --vp-c-bg-soft: #F1F5F9;
+  
+  /* 文字色 */
+  --vp-c-text-1: #0F172A;
+  --vp-c-text-2: #475569;
+  --vp-c-text-3: #94A3B8;
+  
+  /* 边框色 */
+  --vp-c-border: #E2E8F0;
+  --vp-c-divider: #E2E8F0;
+  
+  /* 字体 - 现代无衬线 */
+  --vp-font-family-base: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  --vp-font-family-heading: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  /* 圆角 - 现代感 */
+  --vp-border-radius: 10px;
+  --vp-border-radius-sm: 6px;
+  --vp-border-radius-lg: 16px;
+  
+  /* 阴影 - 柔和现代 */
+  --vp-shadow-1: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --vp-shadow-2: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+  --vp-shadow-3: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --vp-shadow-elevated: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+  
+  /* 间距系统 */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  
+  /* 内容宽度 */
+  --content-max-width: 1200px;
+}
+
+/* 深色模式变量 */
+.dark {
+  --vp-c-bg: #0F172A;
+  --vp-c-bg-alt: #1E293B;
+  --vp-c-bg-elv: #1E293B;
+  --vp-c-bg-soft: #334155;
+  
+  --vp-c-text-1: #F8FAFC;
+  --vp-c-text-2: #CBD5E1;
+  --vp-c-text-3: #64748B;
+  
+  --vp-c-border: #334155;
+  --vp-c-divider: #334155;
+  
+  --vp-c-brand-1: #60A5FA;
+  --vp-c-brand-2: #3B82F6;
+  --vp-c-brand-3: #2563EB;
+}
+
+/* 标题字体 - 现代风格 */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6 {
+  font-family: var(--vp-font-family-heading);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.vp-doc h1 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.vp-doc h2 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--vp-c-border);
+}
+
+.vp-doc h3 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* 首页 Hero 标题 */
+.VPHero .name,
+.VPHero .text {
+  font-family: var(--vp-font-family-heading);
+  letter-spacing: -0.02em;
+}
+
+/* 导航栏毛玻璃效果 - 现代风格 */
+.VPNav {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid var(--vp-c-border);
+}
+
+.dark .VPNav {
+  background-color: rgba(15, 23, 42, 0.85) !important;
+}
+
+/* 导航栏链接样式 */
+.VPNavBarMenuLink {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* 搜索框样式 */
+.VPLocalSearchBox {
+  border-radius: var(--vp-border-radius);
+}
+
+/* 内容区域宽度 - 现代紧凑 */
+.VPDoc .container {
+  max-width: var(--content-max-width) !important;
+}
+
+.VPDoc .content {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.VPDoc .content-container {
+  max-width: var(--content-max-width) !important;
+}
+
+/* 覆盖 VitePress 默认内容宽度变量 */
+:root {
+  --vp-layout-max-width: var(--content-max-width);
+}
+
+/* 侧边栏样式 */
+.VPSidebar {
+  background-color: var(--vp-c-bg-alt);
+  border-right: 1px solid var(--vp-c-border);
+}
+
+.VPSidebarItem .text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* 文章卡片样式 - 现代排版 */
+.vp-doc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--vp-c-text-2);
+}
+
+.vp-doc p {
+  margin-bottom: 1.25rem;
+}
+
+/* 链接样式 - 现代下划线 */
+.vp-doc a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.vp-doc a:hover {
+  border-bottom-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-2);
+}
+
+/* 代码块样式 - 现代圆角 */
+.vp-doc div[class*='language-'] {
+  border-radius: var(--vp-border-radius);
+  margin: 20px 0;
+  box-shadow: var(--vp-shadow-1);
+}
+
+/* 表格样式 - 现代卡片 */
+.vp-doc table {
+  border-radius: var(--vp-border-radius);
+  overflow: hidden;
+  box-shadow: var(--vp-shadow-1);
+  border: 1px solid var(--vp-c-border);
+  margin: 20px 0;
+}
+
+.vp-doc th {
+  background-color: var(--vp-c-bg-soft);
+  font-weight: 600;
+  padding: 12px 16px;
+}
+
+.vp-doc td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--vp-c-border);
+}
+
+/* 引用块样式 - 现代风格 */
+.vp-doc blockquote {
+  border-left: 3px solid var(--vp-c-brand-1);
+  background-color: var(--vp-c-bg-soft);
+  padding: 16px 20px;
+  border-radius: 0 var(--vp-border-radius) var(--vp-border-radius) 0;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.vp-doc blockquote p {
+  margin: 0;
+  color: var(--vp-c-text-1);
+}
+
+/* 列表样式 */
+.vp-doc ul,
+.vp-doc ol {
+  margin: 16px 0;
+  padding-left: 24px;
+}
+
+.vp-doc li {
+  margin: 8px 0;
+}
+
+/* 分隔线 */
+.vp-doc hr {
+  border: none;
+  border-top: 1px solid var(--vp-c-border);
+  margin: 32px 0;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-soft);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-text-3);
+}
+
+/* 阅读进度条 - 现代渐变 */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--vp-c-brand-1), var(--vp-c-brand-3));
+  z-index: 1001;
+  transition: width 0.1s;
+}
+
+/* 文章列表卡片 - 现代风格 */
+.post-card {
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-border);
+  border-radius: var(--vp-border-radius);
+  padding: 24px;
+  margin-bottom: 16px;
+  transition: all 0.25s ease;
+  box-shadow: var(--vp-shadow-1);
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--vp-shadow-3);
+  border-color: var(--vp-c-brand-1);
+}
+
+.post-card .date {
+  font-size: 13px;
+  color: var(--vp-c-text-3);
+  margin-bottom: 8px;
+}
+
+.post-card .title {
+  font-family: var(--vp-font-family-heading);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.post-card .description {
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+}
+
+/* 动画 - 现代流畅 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.vp-doc {
+  animation: fadeInUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Mermaid 图表样式优化 */
+.mermaid {
+  font-size: 14px !important;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon,
+.mermaid .node path {
+  font-size: 13px;
+}
+
+.mermaid .edgeLabel {
+  font-size: 12px;
+}
+
+.mermaid .label {
+  font-size: 13px;
+}
+
+/* Mermaid 节点文字边距和行高 */
+.mermaid .node .label {
+  padding: 4px 8px;
+  line-height: 1.2;
+}
+
+/* Mermaid 节点内文字不换行截断问题修复 */
+.mermaid .node foreignObject {
+  overflow: visible;
+}
+
+.mermaid .node foreignObject div {
+  line-height: 1.2;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Mermaid 节点内段落间距 */
+.mermaid .node foreignObject div p {
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* 深色模式下的 Mermaid */
+.dark .mermaid {
+  filter: brightness(0.95);
+}
