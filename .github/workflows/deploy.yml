@@ -1,4 +1,4 @@
-name: Deploy to Vercel
+name: Deploy to Vercel and CloudBase
 
 on:
   push:
@@ -37,3 +37,11 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           working-directory: ./
+
+      - name: Deploy to CloudBase
+        uses: TencentCloudBase/cloudbase-action@v2
+        if: github.event_name == 'push'
+        with:
+          secretId: ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
+          secretKey: ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
+          envId: ${{ secrets.TENCENT_CLOUD_ENV_ID }}
